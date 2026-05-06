@@ -19,13 +19,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
+          cache: 'npm'
 
-      - name: Install dependencies with npm
-        run: npm install -g bun && bun install
+      - name: Install dependencies
+        run: npm install
 
       - name: Build
-        run: bun run build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
