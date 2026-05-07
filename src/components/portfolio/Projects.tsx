@@ -119,7 +119,7 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
   return (
     <Dialog>
       <article
-        className="group bg-surface border border-surface-border rounded-lg p-6 md:p-8 transition-colors hover:border-foreground/30 reveal md:h-[360px]"
+        className="group bg-surface border border-surface-border rounded-lg p-5 sm:p-6 md:p-8 transition-colors hover:border-foreground/30 reveal md:h-[360px]"
         style={{ "--delay": `${index * 120}ms` } as CSSProperties}
       >
         <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:items-stretch h-full">
@@ -137,25 +137,25 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             )}
           </div>
 
-          <div className="flex h-full flex-col gap-4">
+          <div className="flex h-full flex-col gap-4 text-left items-start">
             <div className="min-h-[96px] md:min-h-[120px]">
               <h3 className="text-xl md:text-2xl font-bold text-foreground">{p.title}</h3>
-              <p className="text-sm md:text-base text-muted-foreground mt-2 leading-[1.6]">
+              <p className="text-sm md:text-base text-muted-foreground mt-2 leading-[1.6] max-w-xl">
                 {p.tagline}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 flex-1 content-start">
+            <div className="flex flex-wrap gap-2 flex-1 content-start justify-start">
               {p.stack.map((s) => (
                 <Pill key={s} tech={s} />
               ))}
             </div>
 
-            <div className="mt-auto flex items-center justify-between">
+            <div className="mt-auto flex w-full items-center justify-between gap-3">
               <DialogTrigger asChild>
                 <button
                   type="button"
-                  className="text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+                  className="text-sm font-medium text-accent hover:text-accent/80 transition-colors md:order-first"
                 >
                   View Project →
                 </button>
@@ -164,18 +164,19 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
                 href={p.repoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-white/20 px-3.5 py-1.5 text-sm text-foreground transition-colors hover:border-accent"
+                aria-label="GitHub"
+                className="inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-foreground transition-colors hover:border-accent"
               >
                 <svg
-                  width="16"
-                  height="16"
+                  width="18"
+                  height="18"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden
                 >
                   <path d="M12 2C6.48 2 2 6.58 2 12.26C2 16.78 4.87 20.64 8.84 21.98C9.34 22.08 9.5 21.76 9.5 21.48C9.5 21.23 9.49 20.57 9.48 19.71C6.72 20.33 6.13 18.52 6.13 18.52C5.69 17.36 5.07 17.05 5.07 17.05C4.2 16.44 5.14 16.45 5.14 16.45C6.1 16.52 6.6 17.46 6.6 17.46C7.46 18.95 8.85 18.52 9.39 18.27C9.48 17.62 9.74 17.18 10.02 16.93C7.81 16.67 5.5 15.78 5.5 11.75C5.5 10.6 5.9 9.66 6.56 8.92C6.45 8.66 6.1 7.57 6.66 6.1C6.66 6.1 7.55 5.81 9.47 7.14C10.33 6.89 11.26 6.76 12.19 6.75C13.12 6.76 14.05 6.89 14.91 7.14C16.83 5.81 17.72 6.1 17.72 6.1C18.28 7.57 17.93 8.66 17.82 8.92C18.48 9.66 18.88 10.6 18.88 11.75C18.88 15.79 16.56 16.66 14.35 16.92C14.7 17.23 15.01 17.84 15.01 18.78C15.01 20.11 15 21.21 15 21.48C15 21.76 15.16 22.08 15.66 21.98C19.63 20.64 22.5 16.78 22.5 12.26C22.5 6.58 18.02 2 12 2Z" />
                 </svg>
-                GitHub
+                <span className="hidden md:inline ml-2">GitHub</span>
               </a>
             </div>
           </div>
@@ -276,13 +277,13 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
 
 export function Projects() {
   return (
-    <section id="projects" className="px-6 py-32">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="px-4 sm:px-6 py-24 sm:py-32">
+      <div className="max-w-6xl mx-auto text-center md:text-left">
         <p className="label-eyebrow reveal" style={{ "--delay": "60ms" } as CSSProperties}>
           Projects
         </p>
         <h2
-          className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-16 reveal"
+          className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-12 sm:mb-16 reveal"
           style={{ "--delay": "140ms" } as CSSProperties}
         >
           What I built

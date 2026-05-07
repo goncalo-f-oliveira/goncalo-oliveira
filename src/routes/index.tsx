@@ -26,7 +26,7 @@ function Index() {
   useRevealOnScroll();
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Nav />
       <main>
         <Hero />
@@ -35,20 +35,20 @@ function Index() {
         <Journey />
         <Connect />
       </main>
-      <footer className="px-6 py-8">
+      <footer className="px-4 sm:px-6 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="h-px w-[100%] mx-auto mb-6 bg-border" />
-          <div className="flex items-center justify-between text-sm text-muted-foreground">
-          <span>Gonçalo Oliveira © 2026</span>
-          <a
-            href="https://github.com/goncalo-f-oliveira"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="GitHub"
-            className="transition-colors hover:text-accent"
-          >
-            <Github size={18} />
-          </a>
+          <div className="flex items-center justify-between gap-4 text-sm text-muted-foreground">
+            <span>Gonçalo Oliveira © 2026</span>
+            <a
+              href="https://github.com/goncalo-f-oliveira"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub"
+              className="transition-colors hover:text-accent"
+            >
+              <Github size={18} />
+            </a>
           </div>
         </div>
       </footer>
