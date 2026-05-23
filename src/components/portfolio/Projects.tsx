@@ -257,16 +257,6 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             >
               <Github className="w-3.5 h-3.5" /> View Project
             </a>
-            {p.demoUrl ? (
-              <a
-                href={p.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-foreground bg-accent/10 border border-accent/30 hover:border-accent/50 hover:bg-accent/20 px-3 py-1.5 rounded-md transition-colors"
-              >
-                <ExternalLink className="w-3.5 h-3.5" /> Live Demo
-              </a>
-            ) : null}
           </div>
         </div>
       </DialogContent>
