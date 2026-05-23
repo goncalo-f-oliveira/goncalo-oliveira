@@ -29,6 +29,7 @@ const projects: Project[] = [
     tagline:
       "Full-stack learning platform built for ISLA Gaia that lets prospective students explore courses, test their knowledge through quizzes, and earn badges based on performance with role-based access control across four user profiles.",
     stack: ["FastAPI", "PostgreSQL", "Angular", "JWT", "Python"],
+    demoUrl: "https://islanders-demo.example.com",
     repoUrl: "https://github.com/goncalo-f-oliveira/islanders-fullstack",
     cardMediaType: "video",
     cardMediaSrc: islandersVideo,
