@@ -14,9 +14,8 @@ export function Typewriter({ text, speed = 28 }: { text: string; speed?: number 
   }, [text, speed]);
 
   return (
-    <p className="mx-auto md:mx-0 max-w-[520px] text-sm sm:text-base text-muted-foreground/90 leading-relaxed typewriter-cursor">
+    <p className="text-base text-muted-foreground/90 max-w-[480px] leading-relaxed typewriter-cursor">
       {out}
     </p>
   );
 }
-

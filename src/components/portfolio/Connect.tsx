@@ -25,8 +25,7 @@ export function Connect() {
             className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-2.5 text-sm text-foreground transition-colors hover:border-accent reveal"
             style={{ "--delay": "260ms" } as CSSProperties}
           >
-            <Github className="w-5 h-5" />
-            <span className="hidden sm:inline">GitHub</span>
+            <Github className="w-5 h-5" /> GitHub
           </a>
           <a
             href="http://linkedin.com/in/goncaloliveira20"
@@ -35,16 +34,14 @@ export function Connect() {
             className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-2.5 text-sm text-foreground transition-colors hover:border-accent reveal"
             style={{ "--delay": "340ms" } as CSSProperties}
           >
-            <Linkedin className="w-5 h-5" />
-            <span className="hidden sm:inline">LinkedIn</span>
+            <Linkedin className="w-5 h-5" /> LinkedIn
           </a>
           <a
             href="mailto:goliveira2212004@gmail.com"
             className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-2.5 text-sm text-foreground transition-colors hover:border-accent reveal"
             style={{ "--delay": "420ms" } as CSSProperties}
           >
-            <Mail className="w-5 h-5" />
-            <span className="hidden sm:inline">goliveira2212004@gmail.com</span>
+            <Mail className="w-5 h-5" /> goliveira2212004@gmail.com
           </a>
         </div>
       </div>

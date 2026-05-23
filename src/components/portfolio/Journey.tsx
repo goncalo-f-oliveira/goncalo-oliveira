@@ -45,10 +45,10 @@ export function Journey() {
           {items.map((it, i) => (
             <li
               key={i}
-              className="relative pb-16 last:pb-0 reveal text-left pl-8"
+              className="relative pl-12 pb-20 last:pb-0 reveal"
               style={{ "--delay": `${220 + i * 120}ms` } as CSSProperties}
             >
-              <span className="absolute left-2 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-background border-2 border-accent" />
+              <span className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-background border-2 border-accent" />
               <p className="label-eyebrow mb-2">{it.when}</p>
               {it.title === "Bachelor's Degree in Multimedia · ISLA Gaia" ? (
                 <h3 className="text-[1.05rem] font-bold text-foreground inline-flex items-center gap-2">
