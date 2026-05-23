@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { ArrowRight, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { Typewriter } from "./Typewriter";
-import profileImage from "@/assets/images/profile.png";
+import profileImage from "@/assets/images/profile.PNG";
 
 export function Hero() {
   return (
